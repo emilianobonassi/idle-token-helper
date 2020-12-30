@@ -1,0 +1,12 @@
+{
+  "name": "@emilianobonassi/idle-token-helper",
+  "version": "1.0.0",
+  "description": "Idle Token Helper is a collection of smart contracts to simplify interaction with Idle Protocol",
+  "license": "AGPL-3.0",
+  "files": [
+    "**/*.sol"
+  ],
+  "dependencies": {
+    "@openzeppelin/contracts": "3.1.0"
+  }
+}
