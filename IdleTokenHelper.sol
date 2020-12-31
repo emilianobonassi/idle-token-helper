@@ -18,6 +18,10 @@ contract IdleTokenHelper {
         return IIdleTokenV3_1(idleYieldToken).tokenPrice();
     }
 
+    function getRedeemPrice(address idleYieldToken) view external returns (uint256 redeemPrice) {
+        return _getRedeemPrice(idleYieldToken, msg.sender);
+    }
+
     function getRedeemPrice(address idleYieldToken, address user) view external returns (uint256 redeemPrice) {
         return _getRedeemPrice(idleYieldToken, user);
     }

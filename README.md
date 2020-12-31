@@ -11,12 +11,12 @@ IdleTokenHelper facilitates your day implementing the formula for `redeemPrice`.
 
 ## Usage
 
-You just need to call `getMintingPrice(address idleYieldToken)` to get minting price and `getRedeemPrice(address idleYieldToken, address user)` for redeemPrice.
+You just need to call `getMintingPrice(address idleYieldToken)` to get minting price and `getRedeemPrice(address idleYieldToken, address user)` for redeemPrice. You can use also `getRedeemPrice(address idleYieldToken)` which provides redeemPrice for `msg.sender`.
 
 For both, you need to pass the address of the IdleToken you are considering. For redeem, you have to provide the address which holds the tokens because the formula leverages the `avgUserPrice`. 
 Technically, it keeps track of the weighted average of the token minted by the specific address, to calculate the yield needed for applying the fees on top.
 
-You can version I deployed for you at [0x925cE5484c49f1E1f14B6ac61B42397dE8264Eb0](https://etherscan.io/address/0x925cE5484c49f1E1f14B6ac61B42397dE8264Eb0) or embed in your contracts. 
+You can version I deployed for you at [0x04Ce60ed10F6D2CfF3AA015fc7b950D13c113be5](https://etherscan.io/address/0x04Ce60ed10F6D2CfF3AA015fc7b950D13c113be5) or embed in your contracts.
 
 The latter could be more expensive at deploy time but cheaper at runtime, remember to use the internal methods (i.e. `_getMintingPrice(address idleYieldToken)` and `_getRedeemPrice(address idleYieldToken, address user)`).
 
